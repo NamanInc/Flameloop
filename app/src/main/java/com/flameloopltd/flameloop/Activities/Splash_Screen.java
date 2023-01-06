@@ -30,7 +30,7 @@ public class Splash_Screen extends AppCompatActivity {
 
                 if (firebaseAuth.getCurrentUser()!=null){
 
-                    Intent intent = new Intent(getApplicationContext(),Setup_Profile.class);
+                    Intent intent = new Intent(getApplicationContext(),Select_Category.class);
                     startActivity(intent);
                     finish();
 
