@@ -38,6 +38,7 @@ dependencies {
     implementation 'com.github.aabhasr1:OtpView:v1.1.2'
     implementation 'com.google.firebase:firebase-auth:21.0.7'
     implementation 'com.google.firebase:firebase-storage:20.0.1'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
     testImplementation 'junit:junit:4.13.2'
     implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
