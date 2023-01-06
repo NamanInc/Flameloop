@@ -9,6 +9,8 @@ import com.flameloopltd.flameloop.Activities.Splash_Screen;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    // HELLLO SIR
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
