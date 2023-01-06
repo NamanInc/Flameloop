@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Activities.Stroiesbyflame">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:src="@drawable/flamelooplogo" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                app:cardCornerRadius="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#555555"
+                android:layout_height="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Skip"
+                        android:layout_centerInParent="true"
+                        android:textColor="#ffff"
+                        android:textSize="10sp"
+
+                        android:drawableTint="#fff"
+
+                        android:fontFamily="@font/poppins_light"/>
+
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/nextdig"
+                        android:layout_alignParentRight="true"/>
+
+
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/exoplyerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:resize_mode="fixed_height"
+                    app:use_controller="false" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Who he can control his mind will be able to control any situation."
+            android:textColor="#ffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            android:textColor="#D5D5D5"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/illus" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_gravity="bottom"
+
+        android:id="@+id/getotpbtn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+
+
+
+        android:background="@drawable/whiteroundedbtn"
+        android:drawableRight="@drawable/nextdig"
+
+        android:drawableTint="@color/black"
+        android:fontFamily="@font/poppins"
+
+        android:padding="10dp"
+
+        android:text="Review Us"
+
+
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        app:backgroundTint="@null"
+
+
+        />
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

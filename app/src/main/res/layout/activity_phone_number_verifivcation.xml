@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/black"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PhoneNumberVerifivcation">
+
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+
+        <ImageView
+
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back_new" />
+
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_marginTop="20dp"
+        android:progressTint="#ffff"
+        android:indeterminateTint="#fff"
+
+
+       android:progress="20"
+        android:background="#1B1B1B"
+
+        style="?android:attr/progressBarStyleHorizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Welcome 🧡 "
+        android:textColor="#CAC6C6"
+
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Enter Your Mobile Number"
+        android:textColor="@android:color/white"
+
+        android:textSize="26sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="35dp"
+                android:scaleType="centerCrop"
+                android:layout_height="25dp"
+                android:src="@drawable/flagindia"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+
+                android:fontFamily="@font/poppins_medium"
+                android:text="+91"
+                android:textColor="#CAC6C6"
+
+                android:textSize="17sp" />
+
+
+            <EditText
+                android:id="@+id/phonenumnber_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/optbc"
+                android:fontFamily="@font/poppins_light"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:textColor="#ffff"
+                android:textColorHint="#787878"
+                android:textCursorDrawable="@drawable/cursorcolor" >
+
+                <requestFocus />
+
+
+
+            </EditText>
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/getotpbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="5dp"
+
+        android:background="@drawable/whiteroundedbtn"
+        android:fontFamily="@font/poppins"
+
+        android:padding="10dp"
+
+        android:text="Get OTP"
+
+
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        app:backgroundTint="@null"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/counter_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+
+
+        android:fontFamily="@font/poppins_medium"
+        android:text="An OTP is soon coming to your device which you need to enter."
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textColor="#B6B3B3"
+
+        android:textSize="12sp" />
+
+
+
+
+
+
+
+
+</LinearLayout>

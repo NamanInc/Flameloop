@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/black"
+    tools:context=".Activities.GetTsratedNew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Best Social App To Make New Friends"
+            android:textColor="@android:color/white"
+
+            android:textSize="26sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="Find people with the same interest as you. Make then feel good with you."
+            android:textColor="#BDBCBC"
+            android:textSize="12sp" />
+
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+
+        android:layout_height="360dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+
+        android:src="@drawable/gettry" />
+
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginBottom="20dp"-->
+
+<!--        app:cardCornerRadius="5dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Get Started"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:textColor="@android:color/black"/>-->
+
+
+<!--        </RelativeLayout>-->
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <Button
+        android:id="@+id/get_startedbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/whiteroundedbtn"
+        android:fontFamily="@font/poppins"
+
+        android:padding="10dp"
+
+        android:text="Get Started"
+
+
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        app:backgroundTint="@null"
+
+
+        />
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

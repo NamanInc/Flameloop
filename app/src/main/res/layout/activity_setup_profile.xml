@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Setup_Profile">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp">
+
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+
+        android:src="@drawable/illus"
+        android:scaleType="centerCrop"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Welcome 🧡 "
+        android:textColor="#CAC6C6"
+
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Setup Your Flame Profile"
+        android:textColor="@android:color/white"
+
+        android:textSize="26sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/click_layout"
+        android:layout_marginTop="20dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageview_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/placeholderimg" />
+
+        <ImageView
+            android:id="@+id/plus_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/plusprofile"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+
+            android:layout_marginTop="30dp"
+            android:id="@+id/nametxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/optbc"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Name"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:textColor="#ffff"
+            android:textColorHint="#787878"
+            android:textCursorDrawable="@drawable/cursorcolor" >
+
+            <requestFocus />
+
+
+
+        </EditText>
+
+
+        <EditText
+            android:layout_marginTop="30dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/optbc"
+            android:id="@+id/email_txt"
+
+            android:fontFamily="@font/poppins_light"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:textColor="#ffff"
+            android:textColorHint="#787878"
+            android:textCursorDrawable="@drawable/cursorcolor" />
+
+        <EditText
+            android:layout_marginTop="30dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bio_txt"
+            android:background="@drawable/optbc"
+
+            android:fontFamily="@font/poppins_light"
+            android:hint="Something About you"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:textColor="#ffff"
+            android:textColorHint="#787878"
+            android:textCursorDrawable="@drawable/cursorcolor" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By Clicking next you will agreeing our term and conditions and privacy policies."
+
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginRight="10dp"
+            android:textSize="10sp"
+
+            android:textColor="#fff"/>
+
+
+
+        <Button
+        android:id="@+id/completesetup_btn"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+            android:textSize="12sp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/whiteroundedbtn"
+        android:drawableRight="@drawable/nextdig"
+
+        android:drawableTint="@color/black"
+        android:fontFamily="@font/poppins"
+
+        android:padding="10dp"
+
+        android:text="Complete Setup"
+
+
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        app:backgroundTint="@null"
+
+
+        />
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginLeft="6dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/loopslogo"/>
+
+        <TextView
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Information is safe with Flameloop ❤️"
+            android:layout_gravity="center"
+            android:textColor="#B1B1B1"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginLeft="3dp"/>
+
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "300482575105",
+    "project_id": "flameloop",
+    "storage_bucket": "flameloop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300482575105:android:d7caf931d1e47b4abb3900",
+        "android_client_info": {
+          "package_name": "com.flameloopltd.flameloop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300482575105-4ale7625cgjst6087cdf68c5ohi83br8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-9pPpNS7V8z9M59EKobLR-kg1C75HT5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300482575105-4ale7625cgjst6087cdf68c5ohi83br8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

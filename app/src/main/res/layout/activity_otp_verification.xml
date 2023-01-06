@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:context=".Activities.Otp_verification">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+
+        <ImageView
+
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back_new" />
+
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_marginTop="20dp"
+        android:progressTint="#ffff"
+        android:indeterminateTint="#fff"
+
+
+        android:progress="50"
+        android:background="#1B1B1B"
+
+        style="?android:attr/progressBarStyleHorizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Hey 👋"
+        android:textColor="#CAC6C6"
+
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Enter your OTP Here"
+        android:textColor="@android:color/white"
+
+        android:textSize="26sp" />
+
+
+
+
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/otp_view"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        app:otp_box_background = "@drawable/optbc"
+
+
+        app:height="50dp"
+
+        app:width="50dp"
+
+
+        app:bar_height="10dp"
+        app:bar_active_color = "#fff"
+        app:length="6"
+
+
+        app:otp_text_size="25dp">
+
+        <requestFocus />
+
+
+
+    </in.aabhasjindal.otptextview.OtpTextView>
+
+
+
+
+    <Button
+        android:id="@+id/optreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="5dp"
+
+        android:background="@drawable/whiteroundedbtn"
+        android:fontFamily="@font/poppins"
+
+        android:padding="10dp"
+
+        android:text="Next"
+
+
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        app:backgroundTint="@null"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/resendcodebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Resend Code"
+        android:textColor="#8E8D8D"
+
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/counter_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+
+        android:fontFamily="@font/poppins_medium"
+        android:text="Did't Receive the code yet ? Click on resent in 0:20 sec "
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textColor="#B6B3B3"
+
+        android:textSize="12sp" />
+
+
+    <ProgressBar
+        android:id="@+id/progressbar_k"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        android:progressTint="#ffff"
+        android:indeterminateTint="#fff"
+
+        android:indeterminate="true"
+        style="?android:attr/progressBarStyleHorizontal" />
+
+</LinearLayout>
