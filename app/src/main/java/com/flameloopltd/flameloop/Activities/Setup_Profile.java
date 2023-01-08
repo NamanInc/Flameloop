@@ -1,5 +1,6 @@
 package com.flameloopltd.flameloop.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +19,8 @@ import android.widget.Toast;
 
 import com.flameloopltd.flameloop.Models.User_Model;
 import com.flameloopltd.flameloop.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -134,7 +137,21 @@ public class Setup_Profile extends AppCompatActivity {
         // TODO
         //  GET UID OF USER AND PASS THAT AS CHILD
 
-        USER_NODE_ROOT.child(new_user.getUSER_FULL_NAME()).setValue(new_user);
+
+
+        USER_NODE_ROOT.child(new_user.getUSER_FULL_NAME()).setValue(new_user).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful())
+                    Toast.makeText(getApplicationContext(),"User Created!",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(getApplicationContext(),"User Not Created!",Toast.LENGTH_LONG).show();
+
+            }
+
+
+        });
     }
 
 
