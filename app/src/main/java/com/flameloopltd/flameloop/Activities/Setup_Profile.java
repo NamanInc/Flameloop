@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,10 +18,18 @@ import android.widget.Toast;
 
 import com.flameloopltd.flameloop.Models.User_Model;
 import com.flameloopltd.flameloop.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.regex.Pattern;
+
 public class Setup_Profile extends AppCompatActivity {
+
+    //     ALL GLOBAL VARIABLES
+
+
     private RelativeLayout mainlayout;
     private ImageView profiledpimg;
     public static final int PICK_CODE = 12;
@@ -31,7 +40,13 @@ public class Setup_Profile extends AppCompatActivity {
     private Button completesetupbtn;
     private String email , name , bio;
 
+
     private StorageReference storageReference;
+
+    // FIREBASE VARIABLES
+
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference USER_NODE_ROOT;
 
 
     @Override
@@ -50,6 +65,17 @@ public class Setup_Profile extends AppCompatActivity {
         BIO_EDIT_TEXT = findViewById(R.id.bio_txt);
         completesetupbtn = findViewById(R.id.completesetup_btn);
         storageReference = FirebaseStorage.getInstance().getReference("Upload");
+
+
+        //GETTING USER_ROOT_NODE
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        USER_NODE_ROOT = firebaseDatabase.getReference("FLAMELOOP_USERS");
+
+
+
+
+
 
 
         mainlayout.setOnClickListener(new View.OnClickListener() {
@@ -79,21 +105,14 @@ public class Setup_Profile extends AppCompatActivity {
                     User_Model new_user = getDataFromFields();
 
                     //UPLOADING USER DETAILS TO FIREBASE : REALTIME DATABASE
-
-
-
-
-
+                    createUserInRDB(new_user);
 
                 }
-                
-                
-                
-                
-                
-                
-                
+
             }
+
+
+
         });
 
 
@@ -105,10 +124,23 @@ public class Setup_Profile extends AppCompatActivity {
 
     }
 
-    
-    
-    
+
+
+
+    //  THIS METHOD WILL CREATE A USER IN REAL TIME DATABASE
+
+    private void createUserInRDB(User_Model new_user) {
+
+        // TODO
+        //  GET UID OF USER AND PASS THAT AS CHILD
+
+        USER_NODE_ROOT.child(new_user.getUSER_FULL_NAME()).setValue(new_user);
+    }
+
+
+
     //  THUS METHOD WILL GET DATA FROM FIELDS, WILL MAKE A OBJECT OF USER_MODEL
+
     private User_Model getDataFromFields() {
         
         // CREATING A NEW USER 
@@ -149,18 +181,20 @@ public class Setup_Profile extends AppCompatActivity {
 
         if (TextUtils.isEmpty(name)){
 
-            Toast.makeText(this, "Please Enter your name", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Please Enter your name", Toast.LENGTH_SHORT).show();
+            NAME_EDIT_TEXT.setError("Please Enter your name");
             return false;
         }
-        else if(TextUtils.isEmpty(email)){
+        else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
 
-            Toast.makeText(this, "Enter your Email id", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Enter your Email id", Toast.LENGTH_SHORT).show();
+            EMAIL_EDIT_TEXT.setError("Please enter a valid Email Address");
             return false;
 
         }
         else if (TextUtils.isEmpty(bio)){
 
-            Toast.makeText(this, "Bio cannot be empty", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Bio cannot be empty", Toast.LENGTH_SHORT).show();
             return false;
 
         }
