@@ -5,14 +5,17 @@ public class Category_Model {
     public String CATEGORY_ID;
     public String CATEGORY_PICTURE;
     public String CATEGORY_TEXT;
+    public String CATEGORY_COLOR;
+
 
     public Category_Model() {
     }
 
-    public Category_Model(String CATEGORY_ID, String CATEGORY_PICTURE, String CATEGORY_TEXT) {
+    public Category_Model(String CATEGORY_ID, String CATEGORY_PICTURE, String CATEGORY_TEXT, String CATEGORY_COLOR) {
         this.CATEGORY_ID = CATEGORY_ID;
         this.CATEGORY_PICTURE = CATEGORY_PICTURE;
         this.CATEGORY_TEXT = CATEGORY_TEXT;
+        this.CATEGORY_COLOR = CATEGORY_COLOR;
     }
 
     public String getCATEGORY_ID() {
